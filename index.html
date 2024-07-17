@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+  </head>
+  <body>
+    <!-- Form Contrianer -->
+    <div class="w-75 mx-auto py-5 px-3 rounded-3 shadow-lg mt-5">
+      <h1>CRUD Project</h1>
+
+      <!-- Product Form  -->
+      
+      <form id="product-form">
+        <div class="mb-3">
+          <label for="product_name" class="form-label">Proudct Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="product_name"
+            placeholder="Product Name"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="product_category" class="form-label"
+            >Product Category</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="product_category"
+            placeholder="Product Category"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="product_price" class="form-label">Product Price</label>
+          <input
+            required
+            type="text"
+            class="form-control"
+            id="product_price"
+            placeholder="Product Price"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="prodct_desc" class="form-label"
+            >Product Description</label
+          >
+          <textarea
+            class="form-control"
+            id="prodct_desc"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+
+        <button id="create-btn" class="btn btn-primary">Add Product</button>
+        <button class="btn btn-primary">Clear</button>
+      </form>
+    </div>
+    <div class="my-5 w-75 mx-auto">
+      <input
+        type="text"
+        class="form-control"
+        id="search-input"
+        placeholder="search by product name.."
+      />
+    </div>
+    <!-- Products Tabel -->
+
+    <div id="product-tabel-container" class="container my-5 d-none">
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+          <thead class="thead-dark">
+            <tr>
+              <th>Index</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Disc</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="tabel-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="warning-msg" class="w-75 mx-auto my-5 d-none">
+      <div class="alert alert-warning" role="alert">
+        A simple warning alert—check it out!
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

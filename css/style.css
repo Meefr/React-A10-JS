@@ -1,0 +1,6 @@
+:root{
+    --highlight-color:yellow;
+}
+.highlight{
+    background-color: var(--highlight-color);
+}
